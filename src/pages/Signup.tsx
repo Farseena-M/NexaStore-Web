@@ -19,7 +19,7 @@ const Signup = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/user/signup", formData);            
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/user/signup`, formData);
             toast.success(response.data.message);
             setFormData({ name: "", email: "", password: "" });
             Nvgt('/login')
@@ -38,7 +38,7 @@ const Signup = () => {
                     To keep connected with us please <br className="hidden md:block" />
                     login with your personal info
                 </p>
-                <button className="border border-white w-48 py-2 rounded-full hover:bg-white hover:text-[#063b5b] transition text-sm" onClick={()=>Nvgt('/login')}>
+                <button className="border border-white w-48 py-2 rounded-full hover:bg-white hover:text-[#063b5b] transition text-sm" onClick={() => Nvgt('/login')}>
                     SIGN IN
                 </button>
 
