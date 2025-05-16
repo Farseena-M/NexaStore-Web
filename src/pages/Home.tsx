@@ -142,7 +142,8 @@ export default function Home() {
                                     <img
                                         src={product.images[0] || "https://via.placeholder.com/150"}
                                         alt={product.title}
-                                        className="mx-auto mb-4 max-h-36 object-contain"
+                                        className="mx-auto mb-4 max-h-36 object-contain cursor-pointer"
+                                        onClick={() => navigate(`/product/${product._id}`)}
                                     />
                                     <h3 className="text-blue-600 font-semibold truncate">{product.title}</h3>
                                     <p className="text-gray-700 font-medium mt-2">
