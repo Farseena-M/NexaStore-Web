@@ -104,7 +104,6 @@ export default function Home() {
 
 
 
-
     return (
         <div className="h-screen w-screen bg-white text-gray-800 overflow-hidden flex flex-col">
             <header className="bg-[#003b5c] text-white py-4 px-6 flex items-center justify-between">
